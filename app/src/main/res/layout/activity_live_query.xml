@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LiveQuery">
+
+    <Button
+        android:id="@+id/bt_registerLikes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="+1 Like"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/bt_callFunctionLikes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="+1 Like - Cloud Code Function"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/bt_registerLikes"
+        tools:ignore="NotSibling" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/bt_callFunctionLikes"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_likes"
+            android:layout_width="82dp"
+            android:layout_height="20dp"
+            android:text="Total Likes: "
+            app:layout_constraintTop_toTopOf="@+id/bt_registerLikes"
+            app:layout_constraintRight_toLeftOf="@+id/et_likes" />
+
+        <EditText
+            android:id="@+id/et_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginTop="0dp"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toBottomOf="@+id/tv_likes"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.394" />
+            />
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
